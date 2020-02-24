@@ -1,0 +1,38 @@
+# For a quick start check out our HTTP Requests collection (Tools|HTTP Client|Open HTTP Requests Collection) or
+# paste cURL into the file and request will be converted to HTTP Request format.
+#
+# Following HTTP Request Live Templates are available:
+# * 'gtrp' and 'gtr' create a GET request with or without query parameters;
+# * 'ptr' and 'ptrp' create a POST request with a simple or parameter-like body;
+# * 'mptr' and 'fptr' create a POST request to submit a form with a text or file field (multipart/form-data);
+
+POST http://localhost:8080/mfz/warehousing
+Content-Type: application/json
+
+{
+  "goodsList": [
+    {
+      "goodsid":3,
+      "purchaseprice": 92,
+      "number": 13
+    },
+    {
+      "goodsid":4,
+      "purchaseprice": 12,
+      "number": 14
+    },
+    {
+      "goodsid":5,
+      "purchaseprice": 62,
+      "number": 18
+    },
+    {
+      "goodsid":6,
+      "purchaseprice": 2.2,
+      "number": 16
+    }
+  ],
+  "supplierid":1
+}
+
+###

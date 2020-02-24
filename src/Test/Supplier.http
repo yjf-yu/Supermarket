@@ -1,0 +1,57 @@
+# For a quick start check out our HTTP Requests collection (Tools|HTTP Client|Open HTTP Requests Collection) or
+# paste cURL into the file and request will be converted to HTTP Request format.
+#
+# Following HTTP Request Live Templates are available:
+# * 'gtrp' and 'gtr' create a GET request with or without query parameters;
+# * 'ptr' and 'ptrp' create a POST request with a simple or parameter-like body;
+# * 'mptr' and 'fptr' create a POST request to submit a form with a text or file field (multipart/form-data);
+
+POST http://localhost:8080/mfz/savesupplier
+Content-Type: application/json
+
+{
+  "name": "旺盛",
+  "phone":1585324714
+}
+
+###
+
+POST http://localhost:8080/mfz/selectsupplier
+Content-Type: application/json
+
+{
+  "id":2
+}
+
+###
+
+POST http://localhost:8080/mfz/updatesupplier
+Content-Type: application/json
+
+
+{
+  "id": 3,
+  "name": "玉皇大帝",
+  "phone": 22
+}
+
+###
+
+POST http://localhost:8080/mfz/deletesupplier
+Content-Type: application/json
+
+{
+  "id":3
+}
+
+###
+
+POST http://localhost:8080/mfz/listsupplier
+Content-Type: application/json
+
+{
+  "page": 0,
+  "rownumber": 3
+}
+
+###

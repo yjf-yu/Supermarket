@@ -1,0 +1,70 @@
+# For a quick start check out our HTTP Requests collection (Tools|HTTP Client|Open HTTP Requests Collection) or
+# paste cURL into the file and request will be converted to HTTP Request format.
+#
+# Following HTTP Request Live Templates are available:
+# * 'gtrp' and 'gtr' create a GET request with or without query parameters;
+# * 'ptr' and 'ptrp' create a POST request with a simple or parameter-like body;
+# * 'mptr' and 'fptr' create a POST request to submit a form with a text or file field (multipart/form-data);
+
+POST http://localhost:8080/mfz/savegoods
+Content-Type: application/json
+
+{
+  "name": "农人山泉",
+  "price": 2.0,
+  "classid": 1,
+  "unitsid": 1,
+  "supplierid": 1
+}
+
+###
+POST http://localhost:8080/mfz/selectgoods
+Content-Type: application/json
+
+{
+"id": 4
+}
+
+###
+
+POST http://localhost:8080/mfz/updategoods
+Content-Type: application/json
+
+{
+  "id": 5,
+  "name": "沐浴露",
+  "price": 88.0,
+  "classid": 2,
+  "unitsid": 1,
+  "supplierid": 1
+}
+
+###
+
+POST http://localhost:8080/mfz/deletegoods
+Content-Type: application/json
+
+{
+  "id": 6
+}
+
+###
+POST http://localhost:8080/mfz/listgoods
+Content-Type: application/json
+
+{
+  "page": 1,
+  "rownumber":1,
+  "condition": {
+    "name": "沐",
+    "classid":2 ,
+    "unitsid": 1,
+    "supplierid":1 ,
+    "minPrice":1 ,
+    "maxPrice":50
+  }
+}
+
+###
+
+

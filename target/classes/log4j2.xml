@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="OFF">
+	<appenders>
+		<Console name="TraceConsole" target="SYSTEM_OUT">
+			<PatternLayout pattern="%d{HH:mm:ss.SSS} %-5level %C{2}.%M line:%L thread:%t - %msg%xEx%n"/>
+		</Console>
+		<Console name="ErrorConsole" target="SYSTEM_OUT">
+			<PatternLayout pattern="%d{HH:mm:ss.SSS} %-5level %C{2}.%M line:%L thread:%t - %msg%xEx%n"/>
+		</Console>
+
+		<RollingFile name="TraceFile" fileName="./log/trace.log"
+					 filePattern="./log/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.log.gz">
+			<PatternLayout pattern="%d{yyyy.MM.dd HH:mm:ss.SSS} %-5level %C{2}.%M line:%L thread:%t - %msg%xEx%n"/>
+			<SizeBasedTriggeringPolicy size="500 MB"/>
+			<DefaultRolloverStrategy max="999"/>
+		</RollingFile>
+	</appenders>
+
+	<loggers>
+
+		<Root level="trace">
+			<AppenderRef ref="TraceFile"/>
+			<AppenderRef ref="TraceConsole"/>
+		</Root>
+
+	</loggers>
+</configuration>
